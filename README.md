@@ -6,7 +6,7 @@
 [![devDependencies Status](https://david-dm.org/tguelcan/restbest/dev-status.svg)](https://david-dm.org/tguelcan/restbest?type=dev) 
 [![Maintainability](https://api.codeclimate.com/v1/badges/5945843900d6de10a55c/maintainability)](https://codeclimate.com/github/tguelcan/restbest/maintainability)
 
-**restbest is a customizable rest backend and productive example (CRUD). It is based on NodeJS, Restify, Mongodb and Mongoose.**
+**restbest is a customizable rest backend and productive generator (CRUD). It is based on NodeJS, Restify, Mongodb and Mongoose.**
 
 - RESTful - It follows the best practices
 - BABEL7 - with ESLint

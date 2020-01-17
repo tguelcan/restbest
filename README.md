@@ -48,7 +48,7 @@ $ yarn run dev
 Restify server listening on http://0.0.0.0:9000, in development mode
 ```
 
-## Use the Endpoint Generator
+# Use the Generator
 ```bash
 $ yarn run generate
 ? What do you want to generate? (Use arrow keys)
@@ -56,7 +56,7 @@ $ yarn run generate
   api endpoint - Create a new api endpoint (/api/endpoint)
 ```
 
-### Service Generator
+## Service Generator
 ```bash
 ? name of the service
 ```
@@ -70,7 +70,7 @@ $ yarn run generate
 ✔  ++ /src/services/yourMiddleware/index.js
 ```
 
-### Api Generator
+## Api Generator
 You can choose the endpoint methods
 ```bash
 > to toggle all, <i> to invert selection)

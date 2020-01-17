@@ -32,6 +32,7 @@ beforeEach(async (done) => {
 
 describe(`Test /${apiEndpoint} endpoint:`, () => {
 
+    /* GET_TEST */
     test(`GET /${apiEndpoint} 200`, async () => {
         const {statusCode, body} = await request(server)
             .get(`${serverConfig.endpoint}/${apiEndpoint}`)
@@ -61,6 +62,7 @@ describe(`Test /${apiEndpoint} endpoint:`, () => {
         expect(status).toBe(404)
     })
 
+    /* POST_TEST */
     test(`POST /${apiEndpoint} 201`, async () => {
         const { status, body } = await request(server)
             .post(`${serverConfig.endpoint}/${apiEndpoint}`)
@@ -71,6 +73,7 @@ describe(`Test /${apiEndpoint} endpoint:`, () => {
         expect(body.content).toEqual('hello world')
     })
 
+    /* PATCH_TEST */
     test(`PATCH /${apiEndpoint}/:id 200`, async () => {
         const { status, body } = await request(server)
             .patch(`${serverConfig.endpoint}/${apiEndpoint}/${dataObject.id}`)
@@ -89,6 +92,7 @@ describe(`Test /${apiEndpoint} endpoint:`, () => {
         expect(status).toBe(404)
     })
 
+    /* DELETE_TEST */
     test(`DELETE /${apiEndpoint}/:id 200`, async () => {
         const { status } = await request(server)
             .delete(`${serverConfig.endpoint}/${apiEndpoint}/${dataObject.id}`)

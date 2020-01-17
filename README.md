@@ -30,6 +30,7 @@ yarn run dev # run the API in development mode
 yarn run docs # generate API docs
 yarn run build # build into /lib
 yarn run serve # serve from /lib
+yarn run generate # generate a new /api endpoint
 ```
 
 ## Playing locally

@@ -73,70 +73,10 @@ const endpoint = restifyMongoose(model, Object.assign(restConfig, config))
  * Serve resources with fine grained mapping control
  * */
 
-/**
- * @api {get} /{{lowerCase endpointName}}s Retrieve {{lowerCase endpointName}}s
- * @apiName Retrieve{{pascalCase endpointName}}s
- * @apiGroup {{pascalCase endpointName}}
- * @apiUse listParams
- * @apiHeader {Number} x-total-count {{pascalCase endpointName}}s count.
- * @apiSuccess {Object[]} {{lowerCase endpointName}}s List of {{lowerCase endpointName}}s.
- * @apiError {Object} 400 Some parameters may contain invalid values.
- */
-router.get('', endpoint.query())
-
-/**
- * @api {get} /{{lowerCase endpointName}}s/:id Retrieve {{lowerCase endpointName}}
- * @apiName Retrieve{{pascalCase endpointName}}
- * @apiGroup {{pascalCase endpointName}}
- * @apiPermission user
- * @apiSuccess {Object} {{lowerCase endpointName}} {{pascalCase endpointName}}'s data.
- * @apiError {Object} 400 Some parameters may contain invalid values.
- * @apiError 404 {{pascalCase endpointName}} not found.
- */
-router.get('/:id', endpoint.detail())
-
-/**
- * @api {post} /{{lowerCase endpointName}}s Create {{lowerCase endpointName}}
- * @apiName Create{{pascalCase endpointName}}
- * @apiGroup {{pascalCase endpointName}}
- * @apiPermission user
- * @apiParam content {{pascalCase endpointName}}'s content.
- * @apiSuccess {Object} {{lowerCase endpointName}} {{pascalCase endpointName}}'s data.
- * @apiError {Object} 400 Some parameters may contain invalid values.
- * @apiError 404 {{pascalCase endpointName}} not found.
- */
-router.post('', endpoint.insert())
-
-/**
- * @api {put} /{{lowerCase endpointName}}s/:id Update {{lowerCase endpointName}}
- * @apiName Update{{pascalCase endpointName}}
- * @apiGroup {{pascalCase endpointName}}
- * @apiParam content {{pascalCase endpointName}}'s content.
- * @apiSuccess {Object} {{lowerCase endpointName}} {{pascalCase endpointName}}'s data.
- * @apiError {Object} 400 Some parameters may contain invalid values.
- * @apiError 404 {{pascalCase endpointName}} not found.
- */  
-router.patch('/:id', endpoint.update())
-
-/**
- * @api {delete} /{{lowerCase endpointName}}s/:id Delete {{lowerCase endpointName}}
- * @apiName {{pascalCase endpointName}}
- * @apiGroup {{pascalCase endpointName}}
- * @apiSuccess (Success 204) 204 No Content.
- * @apiError 404 {{pascalCase endpointName}} not found.
- */
-router.del('/:id', endpoint.remove())
-
-/**
- * @api {delete} /{{lowerCase endpointName}}s/all Delete all {{lowerCase endpointName}}s
- * @apiName DeleteAll{{pascalCase endpointName}}s
- * @apiGroup {{pascalCase endpointName}}
- * @apiPermission admin
- * @apiParam {String} token admin access token.
- * @apiSuccess (Success 204) 204 No Content.
- * @apiError 401 admin access only.
- */
-router.del('/all', doorman(['admin']), deleteAll)
+/* GET */
+/* POST */
+/* PATCH */
+/* DELETE */
 
 export default router
 

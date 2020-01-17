@@ -6,7 +6,6 @@ import auth from './auth'
 
 const router = new Router()
 
-
 /**
  * @apiDefine admin Admin access only
  * You must pass `token` parameter or a Bearer Token authorization header

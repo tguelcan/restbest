@@ -73,6 +73,7 @@ const endpoint = restifyMongoose(model, Object.assign(restConfig, config))
  * Serve resources with fine grained mapping control
  * */
 
+/* GET */
 /**
  * @api {get} /messages Retrieve messages
  * @apiName RetrieveMessages
@@ -95,6 +96,7 @@ router.get('', endpoint.query())
  */
 router.get('/:id', endpoint.detail())
 
+/* POST */
 /**
  * @api {post} /messages Create message
  * @apiName CreateMessage
@@ -107,6 +109,7 @@ router.get('/:id', endpoint.detail())
  */
 router.post('', endpoint.insert())
 
+/* PATCH */
 /**
  * @api {put} /messages/:id Update message
  * @apiName UpdateMessage
@@ -118,6 +121,7 @@ router.post('', endpoint.insert())
  */  
 router.patch('/:id', endpoint.update())
 
+/* DELETE */
 /**
  * @api {delete} /messages/:id Delete message
  * @apiName Message

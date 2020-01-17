@@ -53,18 +53,22 @@ Restify server listening on http://0.0.0.0:9000, in development mode
 $ yarn run generate
 Name of the endpoint in singular like "message" or "article"
 ```
+You can choose the endpoint methods
+```bash
+> to toggle all, <i> to invert selection)
+❯◯ GET
+ ◯ POST
+ ◯ PATCH
+ ◯ DELETE
+```
 
 #### it generates the following files 
-- src
-    - api
-        - article
-            - index.js
-            - controller.js
-            - model.js
-- test
-    - api
-        - article.test.js
-
+```bash
+✔  ++ /test/api/+article.test.js
+✔  ++ /src/api/+article/index.js
+✔  ++ /src/api/+article/model.js
+✔  ++ /src/api/+article/controller.js
+```
 ## Todo
 - Add Auth
     - Local Auth ✔️

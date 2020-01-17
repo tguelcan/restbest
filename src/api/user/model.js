@@ -3,6 +3,7 @@ import randtoken from 'rand-token'
 import mongooseKeywords from 'mongoose-keywords'
 import mongoose, { Schema } from 'mongoose'
 import { isEmail } from 'validator'
+import { BadRequestError } from 'restify-errors'
 
 import { hashPassword, passwordValidator } from '@/utils'
 
@@ -60,6 +61,12 @@ userSchema.path('email').set(function (email) {
     }
 
     return email
+})
+
+userSchema.post('save', function (error, document, next) {
+    next( error.code === 11000 
+        ?   BadRequestError('This email already exist')
+        :   error)
 })
 
 userSchema.pre('save', async function (next) {

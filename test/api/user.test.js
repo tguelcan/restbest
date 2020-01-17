@@ -26,7 +26,6 @@ beforeEach(async (done) => {
     
     defaultToken = await sign(defaultUser)
     expect(isJWT(defaultToken)).toBe(true)
-    // Create User
     
     // Sign in user
     adminToken = await sign(adminUser)
@@ -107,6 +106,15 @@ describe(`Test /${apiEndpoint} endpoint:`, () => {
         expect(body.name).toEqual('max3')
     })
 
+    test(`POST /${apiEndpoint} 400 - Create user with same email`, async () => {
+        const { status, body } = await request(server)
+            .post(`${serverConfig.endpoint}/${apiEndpoint}`)
+            .send({ email: 'max1@moritz.com', password: 'Max123!!!', token: serverConfig.masterKey })
+
+        expect(status).toBe(400)
+        expect(typeof body).toEqual('object')
+    })
+
     test(`PATCH /${apiEndpoint}/:id 201 - Update user`, async () => {
         const { status, body } = await request(server)
             .patch(`${serverConfig.endpoint}/${apiEndpoint}/${adminUser.id}`)
@@ -126,7 +134,7 @@ describe(`Test /${apiEndpoint} endpoint:`, () => {
     })
 
     test(`PATCH /${apiEndpoint}/me 201 - Update user`, async () => {
-        const { status, body, user, req } = await request(server)
+        const { status, body } = await request(server)
             .patch(`${serverConfig.endpoint}/${apiEndpoint}/me`)
             .send({ name: 'Max', token: defaultToken })
 

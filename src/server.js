@@ -1,4 +1,3 @@
-import logger from 'morgan'
 import restify from 'restify'
 import { Router } from 'restify-router'
 import { connect } from '@/services/mongoose'
@@ -13,7 +12,6 @@ const processMode =  process.env.NODE_ENV
  * */
 
 server.use(restify.plugins.throttle(serverConfig.throttle))
-server.use(logger('dev'))
 server.use(restify.plugins.acceptParser(server.acceptable))
 server.use(restify.plugins.bodyParser({mapParams: true, mapFiles: true, requestBodyOnGet: false}))
 server.use(restify.plugins.queryParser())
@@ -35,6 +33,7 @@ if(processMode !== 'test') {
     (async () => {
         try {
             await connect(dbConfig)
+            console.clear()
             await server.listen((serverConfig.port || 3000), () => 
                 console.log('\x1b[36m',`Server ${server.name} listen in ${processMode} mode`,'\x1b[0m'))
         } catch {
@@ -46,6 +45,11 @@ if(processMode !== 'test') {
 /* istanbul ignore next */ 
 server.on('uncaughtException', (req, res, route, err) => 
     console.error(err))
+
+/* istanbul ignore next */ 
+if(processMode === 'development')
+    server.on('after', restify.plugins.metrics({ server: server }, (err, metrics) => 
+        console.info(metrics)))
 
 /*
  * Export for testing

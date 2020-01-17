@@ -16,3 +16,5 @@ env:
     - JWT_SECRET=changechangechangeit
     - MASTER_KEY=yourSecretMasterKey
     - MONGODB_URI=mongodb://localhost:27017/restbest
+notifications:
+  email: false

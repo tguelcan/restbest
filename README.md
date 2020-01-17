@@ -51,8 +51,26 @@ Restify server listening on http://0.0.0.0:9000, in development mode
 ## Use the Endpoint Generator
 ```bash
 $ yarn run generate
-Name of the endpoint in singular like "message" or "article"
+? What do you want to generate? (Use arrow keys)
+❯ service - Create a new service
+  api endpoint - Create a new api endpoint (/api/endpoint)
 ```
+
+### Service Generator
+```bash
+? name of the service
+```
+### You can choose the type of the service
+```bash
+? ? which kind of service you want to generate? (Use arrow keys)
+❯ MIDDLEWARE
+```
+#### it generates the following files 
+```bash
+✔  ++ /src/services/yourMiddleware/index.js
+```
+
+### Api Generator
 You can choose the endpoint methods
 ```bash
 > to toggle all, <i> to invert selection)
@@ -61,7 +79,6 @@ You can choose the endpoint methods
  ◯ PATCH
  ◯ DELETE
 ```
-
 #### it generates the following files 
 ```bash
 ✔  ++ /test/api/+article.test.js
@@ -69,6 +86,7 @@ You can choose the endpoint methods
 ✔  ++ /src/api/+article/model.js
 ✔  ++ /src/api/+article/controller.js
 ```
+
 ## Todo
 - Add Auth
     - Local Auth ✔️

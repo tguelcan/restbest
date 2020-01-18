@@ -10,14 +10,15 @@
 
 - RESTful - It follows the best practices
 - BABEL7 - with ESLint
-- User registration API - Using restify-jwt-community
-- Listing query strings - q, page, limit, fields etc. already provided by restify-mongoose
-- Standard error responses - restify-errors
+- User registration API - Using [restify-jwt-community](https://github.com/frbuceta/restify-jwt-community)
+- Listing query strings - q, page, limit, fields etc. already provided by [restify-mongoose](https://github.com/saintedlama/restify-mongoose)
+- Standard error responses - [restify-errors](https://github.com/restify/errors)
 - Unit and integration tests - Using Jest
 - Continuous integration support - Using Travis CI
 - API docs generator - Using apidoc
 
-## Commands
+
+# #️⃣ Commands you can use
 
 After you clone this repository, these commands are available in `package.json`.
 You can use npm or yarn.
@@ -30,25 +31,34 @@ yarn run dev # run the API in development mode
 yarn run docs # generate API docs
 yarn run build # build into /lib
 yarn run serve # serve from /lib
-yarn run generate # generate a new /api endpoint
+yarn run generate # generate a new /api endpoint or sercice
 ```
 
-## Playing locally
+# 🚀 Getting started - Playing locally
 
-First, you will need to install and run [MongoDB](https://www.mongodb.com/) in another terminal instance.
+1. Clone the repository and install dependencies with 'yarn' or 'npm install'
+
+```bash
+$ git clone https://github.com/tguelcan/restbest
+$ yarn
+```
+
+2. rename the *.env.example* file to *.env*
+
+3. You will need to install and run [MongoDB](https://www.mongodb.com/) in another terminal instance.
 
 ```bash
 $ mongod
 ```
 
-Then, run the server in development mode.
+4. Run the server in development mode.
 
 ```bash
 $ yarn run dev
 Restify server listening on http://0.0.0.0:9000, in development mode
 ```
 
-# Use the Generator
+# 🤖 Use the Generator
 ```bash
 $ yarn run generate
 ? What do you want to generate? (Use arrow keys)
@@ -60,12 +70,12 @@ $ yarn run generate
 ```bash
 ? name of the service
 ```
-### You can choose the type of the service
+You can choose the type of the service
 ```bash
 ? ? which kind of service you want to generate? (Use arrow keys)
 ❯ MIDDLEWARE
 ```
-#### it generates the following files 
+It generates the following files 
 ```bash
 ✔  ++ /src/services/yourMiddleware/index.js
 ```
@@ -79,7 +89,7 @@ You can choose the endpoint methods
  ◯ PATCH
  ◯ DELETE
 ```
-#### it generates the following files 
+It generates the following files 
 ```bash
 ✔  ++ /test/api/+article.test.js
 ✔  ++ /src/api/+article/index.js
@@ -87,24 +97,24 @@ You can choose the endpoint methods
 ✔  ++ /src/api/+article/controller.js
 ```
 
-### Doc Generator
+## Doc Generator
 
 ```bash
 $ yarn run docs
 ```
 
-#### it generates the following files 
+It generates the following files 
 ```bash
 ✔  ++ /docs/index.html
 ✔  ++ API.md
 ```
 
-## Todo
+# 📝 Todo
 - Add Auth
     - Local Auth ✔️
     - Roles ✔️
     - Social Auth 
-- Add a generator ✔️
+- Add generator ✔️
 
 ## License
 

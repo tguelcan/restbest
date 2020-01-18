@@ -21,6 +21,13 @@ server.use(restify.plugins.gzipResponse())
  * Import all routes
  */
 router.add(serverConfig?.endpoint, routes)
+
+/* istanbul ignore next */ 
+router.get('/', (req, res, next) => {
+    res.send(`Hello ${server.name}!`)
+    next()
+})
+
 router.applyRoutes(server)
 
 /**

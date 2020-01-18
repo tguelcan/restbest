@@ -19,7 +19,7 @@ export const passwordValidator = {
         return strongRegex.test(password)
     },
     /**
-     * Hash the Password with bcrypt
+     * Send message if error
      * @returns {string} message - The password must contain at least: 1 uppercase letter, 1 lowercase letter, 1 number, and one special character (E.g. , . _ & ? etc)
      */
     message: () => 'The password must contain at least: 1 uppercase letter, 1 lowercase letter, 1 number, and one special character (E.g. , . _ & ? etc)'
@@ -55,7 +55,7 @@ export const hashPassword = async (password) =>
     await bcrypt.hash(password, 9)
 
 /**
- * Hash the Password with bcrypt
+ * Compare the bcrypt password
  * @param {string} password
  * @returns {Promise} The boolean compared return
  */

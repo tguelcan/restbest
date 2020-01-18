@@ -2,27 +2,20 @@
 
 restBest apiDoc Documentation
 
-- [Article](#article)
-	- [Delete article](#delete-article)
-	- [Create article](#create-article)
-	- [Delete all articles](#delete-all-articles)
-	- [Retrieve article](#retrieve-article)
-	- [Retrieve articles](#retrieve-articles)
-	- [Update article](#update-article)
-	
 - [Authentication](#authentication)
 	- [User Authentication](#user-authentication)
 	
 - [Message](#message)
 	- [Create message](#create-message)
 	- [Delete all messages](#delete-all-messages)
-	- [Delete user](#delete-user)
+	- [Delete message](#delete-message)
 	- [Retrieve message](#retrieve-message)
 	- [Retrieve messages](#retrieve-messages)
 	- [Update message](#update-message)
 	
 - [User](#user)
 	- [Create user](#create-user)
+	- [Delete user](#delete-user)
 	- [Retrieve current user](#retrieve-current-user)
 	- [Retrieve user](#retrieve-user)
 	- [Retrieve users](#retrieve-users)
@@ -30,83 +23,6 @@ restBest apiDoc Documentation
 	- [Update user](#update-user)
 	
 
-
-# Article
-
-## Delete article
-
-
-
-	DELETE /articles/:id
-
-
-## Create article
-
-
-
-	POST /articles
-
-
-### Parameters
-
-| Name    | Type      | Description                          |
-|---------|-----------|--------------------------------------|
-| content			| 			|  <p>Article's content.</p>							|
-
-## Delete all articles
-
-
-
-	DELETE /articles/all
-
-
-### Parameters
-
-| Name    | Type      | Description                          |
-|---------|-----------|--------------------------------------|
-| token			| String			|  <p>admin access token.</p>							|
-
-## Retrieve article
-
-
-
-	GET /articles/:id
-
-
-## Retrieve articles
-
-
-
-	GET /articles
-
-### Headers
-
-| Name    | Type      | Description                          |
-|---------|-----------|--------------------------------------|
-| x-total-count			| Number			|  <p>Articles count.</p>							|
-
-### Parameters
-
-| Name    | Type      | Description                          |
-|---------|-----------|--------------------------------------|
-| q			| String			| **optional** <p>Query to search.</p>							|
-| page			| Number			| **optional** <p>Page number.</p>							|
-| limit			| Number			| **optional** <p>Amount of returned items.</p>							|
-| sort			| String[]			| **optional** <p>Order of returned items.</p>							|
-| fields			| String[]			| **optional** <p>Fields to be returned.</p>							|
-
-## Update article
-
-
-
-	PUT /articles/:id
-
-
-### Parameters
-
-| Name    | Type      | Description                          |
-|---------|-----------|--------------------------------------|
-| content			| 			|  <p>Article's content.</p>							|
 
 # Authentication
 
@@ -151,13 +67,13 @@ restBest apiDoc Documentation
 
 | Name    | Type      | Description                          |
 |---------|-----------|--------------------------------------|
-| token			| String			|  <p>admin access token.</p>							|
+| admintoken			| String			|  <p>admin access token.</p>							|
 
-## Delete user
+## Delete message
 
 
 
-	DELETE /users/:id
+	DELETE /messages/:id
 
 
 ## Retrieve message
@@ -222,6 +138,13 @@ restBest apiDoc Documentation
 | picture			| String			| **optional** <p>User's picture.</p>							|
 | role			| String			| **optional** <p>User's role.</p>							|
 
+## Delete user
+
+
+
+	DELETE /users/:id
+
+
 ## Retrieve current user
 
 
@@ -233,7 +156,8 @@ restBest apiDoc Documentation
 
 | Name    | Type      | Description                          |
 |---------|-----------|--------------------------------------|
-| token			| String			|  <p>User or Admin token.</p>							|
+| token			| String			|  <p>User token.</p>							|
+| admintoken			| String			|  <p>Admin token.</p>							|
 
 ## Retrieve user
 
@@ -272,6 +196,7 @@ restBest apiDoc Documentation
 | Name    | Type      | Description                          |
 |---------|-----------|--------------------------------------|
 | token			| String			|  <p>User token.</p>							|
+| admintoken			| String			|  <p>Admin token.</p>							|
 | password			| String			|  <p>User's new password.</p>							|
 
 ## Update user
@@ -286,6 +211,7 @@ restBest apiDoc Documentation
 | Name    | Type      | Description                          |
 |---------|-----------|--------------------------------------|
 | token			| String			|  <p>User token.</p>							|
+| admintoken			| String			|  <p>User token.</p>							|
 | name			| String			| **optional** <p>User's name.</p>							|
 | picture			| String			| **optional** <p>User's picture.</p>							|
 | userSettings			| Object			| **optional** <p>some usersettings values.</p>							|

@@ -13,7 +13,6 @@ router.get('', endpoint.query())
  * @api {get} /{{lowerCase endpointName}}s/:id Retrieve {{lowerCase endpointName}}
  * @apiName Retrieve{{pascalCase endpointName}}
  * @apiGroup {{pascalCase endpointName}}
- * @apiPermission user
  * @apiSuccess {Object} {{lowerCase endpointName}} {{pascalCase endpointName}}'s data.
  * @apiError {Object} 400 Some parameters may contain invalid values.
  * @apiError 404 {{pascalCase endpointName}} not found.

@@ -3,6 +3,9 @@ import model from '@/api/user/model'
 import { sign, decode } from '@/services/guard'
 import { comparePassword } from '@/utils'
 
+/**
+ * @throws {BadRequestError} 400 Error - invalid email or password
+ */
 const errorHandler = (next) => 
     next(new BadRequestError('invalid email or password'))
 

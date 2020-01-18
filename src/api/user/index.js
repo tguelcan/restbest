@@ -94,7 +94,8 @@ router.get('',
  * @apiName RetrieveCurrentUser
  * @apiGroup User
  * @apiPermission user
- * @apiParam {String} token User or Admin token.
+ * @apiParam {String} token User token.
+ * @apiParam {String} admintoken Admin token.
  * @apiSuccess {Object} user User's data.
  */
 router.get('/me', doorman(['user', 'admin']), 
@@ -139,6 +140,7 @@ router.post('',
  * @apiGroup User
  * @apiPermission user
  * @apiParam {String} token User token.
+ * @apiParam {String} admintoken User token.
  * @apiParam {String} [name] User's name.
  * @apiParam {String} [picture] User's picture.
  * @apiParam {Object} [userSettings] some usersettings values.
@@ -157,6 +159,7 @@ router.patch('/:id',
  * @apiName UpdatePassword
  * @apiGroup User
  * @apiParam {String} token User token.
+ * @apiParam {String} admintoken Admin token.
  * @apiParam {String{6..}} password User's new password.
  * @apiSuccess (Success 201) {Object} user User's data.
  * @apiError {Object} 400 Some parameters may contain invalid values.
@@ -171,9 +174,9 @@ router.patch('/:id/password',
 /**
  * @api {delete} /users/:id Delete user
  * @apiName DeleteMessage
- * @apiGroup Message
+ * @apiGroup User
  * @apiSuccess (Success 204) 204 No Content.
- * @apiError 404 Message not found.
+ * @apiError 404 User not found.
  */
 router.del('/:id', 
     endpoint.remove())

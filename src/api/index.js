@@ -8,7 +8,7 @@ const router = new Router()
 
 /**
  * @apiDefine admin Admin access only
- * You must pass `token` parameter or a Bearer Token authorization header
+ * You must pass `admintoken` parameter or a Bearer Token authorization header
  * to access this endpoint.
  */
 /**

@@ -1,9 +1,11 @@
 import 'dotenv/config'
 export * from './auth'
 
-/*
- * Javascript Helper
- **/
+/**
+ * Javascript helper for required env values
+ * @param {string} name - The name of the env
+ * @returns {string} that env.
+ */
 
 export const requireProcessEnv = (name) => {
     if (!process.env[name]) {

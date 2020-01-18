@@ -87,6 +87,18 @@ You can choose the endpoint methods
 ✔  ++ /src/api/+article/controller.js
 ```
 
+### Doc Generator
+
+```bash
+$ yarn run docs
+```
+
+#### it generates the following files 
+```bash
+✔  ++ /docs/index.html
+✔  ++ API.md
+```
+
 ## Todo
 - Add Auth
     - Local Auth ✔️

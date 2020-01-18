@@ -4,9 +4,9 @@ import { masterman } from '@/services/guard'
 
 // import { model, modelProjection } from './model'
 
-/*
+/**
  * Serve resources with fine grained mapping control
- * */
+ */
 
 const router = new Router()
 

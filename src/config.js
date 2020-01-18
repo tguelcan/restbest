@@ -30,12 +30,11 @@ export const dbConfig = {
     }
 }
 export const restConfig = {
-    /*
+    /**
      * You can customize global rest configurations here
      * sort: '-createdAt'
      * outputFormat: 'json-api'
      */
-
     pageSize: 50
 }
 

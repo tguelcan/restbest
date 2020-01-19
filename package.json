@@ -1,6 +1,6 @@
 {
   "name": "restbest",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "RESTful Restify Mongoose Generator with jest and integration tests",
   "author": "Tayfun Guelcan <hello@tayfunguelcan.de>",
   "license": "MIT",

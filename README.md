@@ -38,9 +38,26 @@ yarn run generate # generate a new /api endpoint or sercice
 ```
 
 # 🚀 Getting started - Playing locally
+## Easy to use with npx (recommended)
 
+1. Download and install
+```bash
+$ npx restbest
+```
+
+2. You will need to install and run [MongoDB](https://www.mongodb.com/) in another terminal instance.
+```bash
+$ mongod
+```
+
+3. Go to the /restbest folder and run the server in development mode.
+```bash
+$ yarn run dev
+Restify server listening on http://0.0.0.0:9000, in development mode
+```
+
+## Manual Setup
 1. Clone the repository and install dependencies with 'yarn' or 'npm install'
-
 ```bash
 $ git clone https://github.com/tguelcan/restbest
 $ yarn
@@ -49,19 +66,16 @@ $ yarn
 2. rename the *.env.example* file to *.env*
 
 3. You will need to install and run [MongoDB](https://www.mongodb.com/) in another terminal instance.
-
-
 ```bash
 $ mongod
 ```
 
 4. Run the server in development mode.
-
-
 ```bash
 $ yarn run dev
 Restify server listening on http://0.0.0.0:9000, in development mode
 ```
+
 *And voila! We have connected our restful backend application!*
 
 <img src="https://media.giphy.com/media/3o8dFn5CXJlCV9ZEsg/giphy-downsized.gif" width="400">

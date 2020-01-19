@@ -86,7 +86,6 @@
     "mongodb-memory-server": "^6.2.2",
     "nodemon": "^2.0.2",
     "plop": "^2.5.3",
-    "shelljs": "^0.8.3",
     "superagent": "^5.2.1",
     "supertest": "^4.0.2"
   },

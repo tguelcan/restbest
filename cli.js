@@ -1,25 +1,20 @@
-var shell = require('shelljs')
- 
-if (!shell.which('git')) {
-    shell.echo('Sorry, this script requires git')
-    shell.exit(1)
-}
+var exec = require('child_process').exec; 
 
-if (!shell.which('npm')) {
-    shell.echo('Sorry, this script requires npm')
-    shell.exit(1)
-}
+// Copy files
+function execute(command, callback) {
+    console.log('Download restbest');
+    exec('git clone https://github.com/tguelcan/restbest.git', function(error, stdout, stderr) { 
+        exec('cd restbest && mv .env.example .env')
+        if(!error) {
+            console.log('Install packages');
+            exec('cd restbest && npm install', function(error, stdout, stderr) { 
+            console.log(stdout);
+                if(!error) {
+                   console.log('Done!');
+                }
+            });
+        }
+    });
+};
 
-// Run external tool synchronously
-if (shell.exec('git clone https://github.com/tguelcan/restbest.git').code !== 0) {
-    shell.echo('Error :(')
-    shell.exit(1)
-} else {
-    if (shell.which('yarn')) {
-        shell.echo('Install Packages')
-        shell.exec('cd restbest && yarn')
-    } else {
-        shell.echo('Install Packages')
-        shell.exec('cd restbest && npm install')
-    }
-}
+execute()

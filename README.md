@@ -9,7 +9,7 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/5945843900d6de10a55c/maintainability)](https://codeclimate.com/github/tguelcan/restbest/maintainability)
 [![Heroku CI Status](https://heroku-pass-ci.herokuapp.com/last.svg)](https://dashboard.heroku.com/pipelines/0e6548a4-79df-4655-b19a-724b3c009aa3/tests)
 
-**restbest is a customizable rest backend and productive generator (CRUD). It is based on NodeJS, Restify, Mongodb and Mongoose.**
+**restbest is a customizable rest backend and productive generator. It is based on NodeJS, Restify, Mongodb and Mongoose.**
 
 - RESTful - It follows the best practices
 - BABEL7 - with ESLint

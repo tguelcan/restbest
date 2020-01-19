@@ -27,14 +27,14 @@ After you clone this repository, these commands are available in `package.json`.
 You can use npm or yarn.
 
 ```bash
-yarn test # test using Jest
-yarn run test:coverage # test and open the coverage report in the browser
-yarn run lint # lint using ESLint
-yarn run dev # run the API in development mode
-yarn run docs # generate API docs
-yarn run build # build into /lib
-yarn run serve # serve from /lib
-yarn run generate # generate a new /api endpoint or sercice
+$ yarn test # test using Jest
+$ yarn run test:coverage # test and open the coverage report in the browser
+$ yarn run lint # lint using ESLint
+$ yarn run dev # run the API in development mode
+$ yarn run docs # generate API docs
+$ yarn run build # build into /lib
+$ yarn run serve # serve from /lib
+$ yarn run generate # generate a new /api endpoint or sercice
 ```
 
 # 🚀 Getting started - Playing locally

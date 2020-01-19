@@ -1,6 +1,6 @@
 {
   "name": "restbest",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "restify mongoos crud",
   "author": "Tayfun Guelcan <hello@tayfunguelcan.de>",
   "license": "MIT",

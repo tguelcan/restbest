@@ -12,9 +12,7 @@
   "bugs": {
     "url": "https://github.com/tguelcan/restbest/labels/bug"
   },
-  "homepage": {
-    "url": "https://tayfunguelcan.de"
-  },
+  "homepage": "https://tayfunguelcan.de",
   "apidoc": {
     "name": "restbest",
     "description": "restBest apiDoc Documentation",

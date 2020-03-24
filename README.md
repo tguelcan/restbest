@@ -53,7 +53,7 @@ $ mongod
 3. Go to the /restbest folder and run the server in development mode.
 ```bash
 $ yarn run dev
-Restify server listening on http://0.0.0.0:9000, in development mode
+Restify server listening on http://0.0.0.0:3000, in development mode
 ```
 
 ## Manual Setup
@@ -73,7 +73,7 @@ $ mongod
 4. Run the server in development mode.
 ```bash
 $ yarn run dev
-Restify server listening on http://0.0.0.0:9000, in development mode
+Restify server listening on http://0.0.0.0:3000, in development mode
 ```
 
 *And voila! We have connected our restful backend application!*

@@ -4,7 +4,7 @@ import model from './model'
 
 export const create = async({ body }, res, next) => {
     // Pass values
-    let { email, password } = body
+    const { email, password } = body
     
     try {
 
@@ -25,12 +25,12 @@ export const create = async({ body }, res, next) => {
 
 export const update = async({ user, params, body }, res, next) => {
     // Pass values
-    let { name, picture, email } = body
+    const { name, picture, email } = body
     
     try {
 
         // Find User
-        let result = await model.findById(params.id === 'me' ? user._id : params.id)
+        const result = await model.findById(params.id === 'me' ? user._id : params.id)
 
         const isAdmin = user.role === 'admin'
         const isSelfUpdate = params.id === 'me' ? true : (result._id.equals(user._id))
@@ -56,11 +56,11 @@ export const update = async({ user, params, body }, res, next) => {
 
 export const updatePassword = async ({ body , params, user }, res, next) => {
     // Pass values
-    let { password } = body
+    const { password } = body
     
     try {
         // Find User
-        let result = await model.findById(params.id === 'me' ? user._id : params.id)
+        const result = await model.findById(params.id === 'me' ? user._id : params.id)
 
         // Check permissions
         if (!result._id.equals(user._id)) {

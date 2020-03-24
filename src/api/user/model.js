@@ -84,7 +84,7 @@ userSchema.pre('save', async function (next) {
 
 export const modelProjection = function(req, item = this, cb) {
     let view = {}
-    let fields = ['_id', 'name', 'email', 'picture', 'role']
+    const fields = ['_id', 'name', 'email', 'picture', 'role']
 
     /*
      * If user logged or have speicific role.

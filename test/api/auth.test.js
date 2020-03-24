@@ -48,7 +48,7 @@ beforeEach(async () => {
     expect(isJWT(token)).toBe(true)
 
     // Decode signed user
-    let { _id, role } = await decode(token)
+    const { _id, role } = await decode(token)
     expect(typeof _id).toBe('string')
     expect(typeof role).toBe('string')
     expect(role).toBe('admin')

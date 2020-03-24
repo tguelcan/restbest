@@ -13,8 +13,8 @@ const messageSchema = new Schema({
 })
 
 export const modelProjection = function(req, item, cb) {
-    let view = {}
-    let fields = ['id', 'content']
+    const view = {}
+    const fields = ['id', 'content']
 
     /*
     if (req.user) {

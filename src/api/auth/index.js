@@ -15,9 +15,9 @@ const router = new Router()
  * @apiName CreateMessage
  * @apiGroup Authentication
  * @apiPermission user
- * @apiParam {String} username User's username.
+ * @apiParam {String} email User's username.
  * @apiParam {String} password User's password.
- * @apiParam {String} masterkey admin access token.
+ * @apiParam {String} token admin access token.
  * @apiSuccess {Object} user User's data.
  * @apiError {Object} 400 Some parameters may contain invalid values.
  * @apiError 404 User not found.

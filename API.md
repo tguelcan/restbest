@@ -1,4 +1,4 @@
-# restbest v0.0.1
+# restbest v0.1.4
 
 restBest apiDoc Documentation
 
@@ -37,9 +37,9 @@ restBest apiDoc Documentation
 
 | Name    | Type      | Description                          |
 |---------|-----------|--------------------------------------|
-| username			| String			|  <p>User's username.</p>							|
+| email			| String			|  <p>User's username.</p>							|
 | password			| String			|  <p>User's password.</p>							|
-| masterkey			| String			|  <p>admin access token.</p>							|
+| token			| String			|  <p>admin access token.</p>							|
 
 # Message
 

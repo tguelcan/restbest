@@ -72,16 +72,4 @@ describe('Server Test:', () => {
         done()
     })
 
-    test('GET abcd 404', async (done) => {
-        try {
-            await request(server)
-                .get('abcd')
-        } catch (error) {
-            expect(typeof error).toBe('object')
-            expect(error.code).toBe('ECONNREFUSED')
-            done()
-        }
-
-    })
-
 })

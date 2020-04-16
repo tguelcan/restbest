@@ -33,7 +33,7 @@ beforeEach(async () => {
     
     expect(typeof adminUser).toBe('object')
     expect(typeof adminUser._id).toBe('object')
-    expect(Array.isArray([adminUser.keyworkds])).toBe(true)
+    expect(Array.isArray(adminUser.keywords)).toBe(true)
     expect(typeof adminUser.name).toBe('string')
     expect(typeof adminUser.picture).toBe('string')
     expect(typeof adminUser.email).toBe('string')
